@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="myPromise.js" type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+<script>
+
+  let p = new MyPromise((resolve,reject)=>{
+    // throw '这是Chiesa'
+    resolve(1)
+  })
+  console.log(p, '1 p');
+  let p1 = p.then(res =>{
+    console.log(res);
+    return 1
+  }
+  , err=>{
+    console.log(err, 'catch');
+    return err
+  }).then(res=>{
+    console.log(res,3);
+    return 333
+  }).finally(res=>{
+    console.log(res, 'finally');
+    return 1
+  })
+  console.log(p1, '1 p1');
+  console.log(p, '2 p');
+
+  setTimeout(()=>{
+    console.log(p1, '2 p1');
+    // console.log(p3, '1 p3');
+  },0)
+  console.log('同步代码验证',2);
+
+  // let p2 = p1.then(res=>{
+  //   console.log(res, 'resolve');
+  //   return res
+  // },err =>{
+  //   console.log(err,'reject');
+  //   return err
+  // })
+
+  // let p3 = p2.then(1,2)
+
+
+  // let p1 = new Promise(((resolve, reject) => {
+  //   throw '假测试'
+  // }))
+  // console.log(p1);
+
+
+
+</script>
+</html>

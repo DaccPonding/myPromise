@@ -1,0 +1,20 @@
+{
+  "name": "mypromise",
+  "version": "1.0.0",
+  "description": "这是一个自己模拟的Promise",
+  "main": "myPromise.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MPierreM/myPromise.git"
+  },
+  "author": "阿正",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MPierreM/myPromise/issues"
+  },
+  "homepage": "https://github.com/MPierreM/myPromise#readme"
+}
